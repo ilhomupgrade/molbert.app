@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Dithering } from "@paper-design/shaders-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 interface GeneratedImage {
   url: string
@@ -799,9 +800,10 @@ export function ImageCombiner() {
       </div>
 
       <div className="relative z-10 p-2 md:p-6 w-full max-w-6xl mx-auto select-none">
-        <div className="bg-black/70 backdrop-blur-sm border-0 p-3 md:p-8 rounded-xl">
-          <div className="mb-4 md:mb-8">
-            <h1 className="text-lg md:text-2xl font-bold text-white select-none">v0 Nano Banana Starter</h1>
+        <div className="bg-background/70 backdrop-blur-sm border-0 p-3 md:p-8 rounded-xl">
+          <div className="mb-4 md:mb-8 flex items-center justify-between">
+            <h1 className="text-lg md:text-2xl font-bold text-foreground select-none">v0 Nano Banana Starter</h1>
+            <ThemeToggle />
           </div>
 
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:gap-12">
